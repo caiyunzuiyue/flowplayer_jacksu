@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>flowplayer播放器控制栏背景为白色 </title>
+<script src="flowplayer/flowplayer.min.js"></script>
+<style type="text/css">
+	.player{ height: 500px; display: block;}
+</style>
+</head>
+
+<body>
+
+<div style=" width:900px;  margin:20px auto;">
+      <h1>flowplayer播放器控制栏背景为黑色</h1>
+      <a class="player" id="player" href="flowplayer/video/v1.mp4"></a>
+</div>
+
+<div style=" width:900px;  margin:20px auto;">
+      <h1>flowplayer播放器控制栏背景为白色</h1>
+      <a class="player" id="player2" href="flowplayer/video/v1.mp4"></a>
+</div>
+
+
+<SCRIPT>
+$f("player", "flowplayer/flowplayer.swf", {
+    clip: { autoPlay:false, autoBuffering: true }
+});
+
+
+$f("player2", "flowplayer/flowplayer.swf", {
+	plugins: {
+        controls: {
+            buttonColor: 'rgba(0, 0, 0, 0.9)',
+            buttonOverColor: '#000000',
+            backgroundColor: '#D7D7D7',
+            backgroundGradient: 'medium',
+            sliderColor: '#FFFFFF',
+            sliderBorder: '1px solid #808080',
+            volumeSliderColor: '#FFFFFF',
+            volumeBorder: '1px solid #808080',
+            timeColor: '#000000',
+            durationColor: '#535353'
+        }
+    },
+    clip: { autoPlay:false, autoBuffering: true }
+});
+</SCRIPT> 
+
+</body>
+</html>
+

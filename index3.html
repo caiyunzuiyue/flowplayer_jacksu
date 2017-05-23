@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>一个页面多个播放器 </title>
+		<script src="flowplayer/flowplayer.min.js"></script>
+		<style type="text/css">
+		    h1{ font-size: 22px; font-weight: normal; text-align: center;}
+			.myPlayer {display:block;width: 500px; height:340px; text-align:center; margin:15px; float:left; border:1px solid #999;}
+			.myPlayer img { margin-top:70px; border:0px;}
+		    .myPlayer:hover { border:1px solid #000;}
+		</style>
+	</head>
+
+	<body>
+
+		<div style=" width:1200px;  margin:20px auto;">
+			<h1>flowplayer一个页面多个播放器</h1>
+			<a class="myPlayer" href="flowplayer/video/v1.mp4"></a>
+			<a class="myPlayer" href="flowplayer/video/v1.mp4"></a>
+			<a class="myPlayer" href="flowplayer/video/v1.mp4"></a>
+			<a class="myPlayer" href="flowplayer/video/v1.mp4"></a>
+		</div>
+		<script type="text/javascript">
+			$f(".myPlayer", "flowplayer/flowplayer.swf", {
+				plugins: {
+			        controls: { 
+			            buttonColor: 'rgba(0, 0, 0, 0.8)',
+			            buttonOverColor: '#000000',
+			            backgroundColor: '#D7D7D7',
+			            backgroundGradient: 'medium',
+			            sliderColor: '#FFFFFF',
+			            sliderBorder: '1px solid #808080',
+			            volumeSliderColor: '#FFFFFF',
+			            volumeBorder: '1px solid #808080',
+			            timeColor: '#000000',
+			            durationColor: '#535353'
+			        }
+			    },
+			    clip: { autoPlay:false,  autoBuffering: true }
+			});
+		</script>
+
+	</body>
+
+</html>

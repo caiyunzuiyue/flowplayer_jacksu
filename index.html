@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>flowplayer播放器控制栏背景设置</title>
+		<script src="flowplayer/flowplayer.min.js"></script>
+		<style type="text/css">
+			.player {
+				display: block;
+				width: 800px;
+				height: 500px;
+				text-align: center;
+				margin: 15px;
+				float: left;
+				border: 1px solid #999;
+			}
+			.player img {
+				margin-top: 100px;
+				border: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		
+		<div style=" width:900px;  margin:20px auto;">
+			<h1>flowplayer播放器控制栏背景设置</h1>
+			<a class="player" id="player" href="flowplayer/video/v1.mp4"></a>
+		</div>
+		<SCRIPT>
+			$f("player", "flowplayer/flowplayer.swf", {
+					plugins: {
+						controls: {  
+					        height:32,
+					        
+							backgroundColor: "rgba(0,0,0,0.8)",
+							backgroundGradient: "none",
+							buttonColor: 'rgba(255,255,255,0.99)',
+							sliderColor: 'rgba(255,255,255,0.2)',    //进度条背景色
+							sliderBorder: '1px solid rgba(255,255,255,0.9)',  //进度条边框颜色
+							volumeSliderColor: 'rgba(255,255,255,0.2)',  //音量背景色
+							volumeBorder: '1px solid rgba(255,255,255,0.9)',  //音量边框颜色
+							timeColor: 'rgba(255,255,255,0.8)', //经过的时间
+							durationColor: 'rgba(100,200,100,0.8)',    //总时间
+							tooltipColor: 'rgba(255, 255, 255, 0.99)', //提示的背景色
+							tooltipTextColor: '#000000'     //提示的文字颜色
+
+						}
+					},
+				    clip: { autoPlay:false,  autoBuffering: true },
+				    play:{replayLabel: '重播'}
+				    
+			});
+		</SCRIPT>
+
+	</body>
+
+</html>
